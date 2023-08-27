@@ -1,0 +1,7 @@
+# users/views.py
+def get_expert_advice(request):
+    if request.method == 'POST':
+        message = request.POST.get('message')
+        # Process message and return expert advice
+        return render(request, 'expert_advice.html', {'advice': expert_advice})
+    return render(request, 'expert_advice.html')
